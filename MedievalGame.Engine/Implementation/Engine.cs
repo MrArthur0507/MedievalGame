@@ -1,4 +1,5 @@
-﻿using MedievalGame.Engine.Economy;
+﻿using MedievalGame.Engine.CommandTaker;
+using MedievalGame.Engine.Economy;
 using MedievalGame.Engine.Observer;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace MedievalGame.Engine.Implementation
         public void InitEngine()
         {
             Observers.Add(new PassiveIncome());
+            Observers.Add(new InputTaker());
         }
 
         public void Notify()
